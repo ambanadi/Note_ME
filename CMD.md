@@ -38,7 +38,117 @@
 
 <details>
 <summary><b>🏗️Information</b></summary>
-Command > Sweitch > Arguments
+1.Serial Number
+ 
+ wmic bios get serialnumber
+ 
+2. Mac Address
+
+wmic nic get macaddress
+getmac
+
+4. CPU
+
+wmic cpu
+wmic cpu get Name,NumberOfCores,NumberOfLogicalProcessors
+systeminfo | findstr /I "Processor"
+wmic cpu get caption, deviceid, name, numberofcores, maxclockspeed, status
+
+6. RAM
+
+wmic computersystem get totalphysicalmemory
+wmic memorychip get capacity
+wmic memorychip get speed
+wmic memorychip list full
+
+8. Partition
+
+wmic partition get name,size,type
+
+10. Process
+
+wmic process list
+
+12. Product
+
+wmic product
+wmic product get name,version
+
+14. Window's Version
+
+winver
+
+16. Check Disk
+
+chkdsk
+systeminfo
+
+18. Disk Details
+
+  diskpart
+  list disk
+  select disk_name
+  create partition primary
+  format fs=ntfs label=Backup quick
+  detail disk
+  exit
+
+20. hard disk
+
+    wmic diskdrive get model,index,firmwareRevision,status,interfaceType,totalHeads,totalTracks,totalCylinders,totalSectors,partitions
+        fsutil fsinfo drives
+        fsutil fsinfo volumelist
+        fsutil fsinfo statistics C:
+22. motherboard
+
+wmic baseboard get product,manufacturer,version,serialnumber
+
+24. graphics card
+
+wmic path win32_VideoController get name
+
+26. BIOS
+
+wmic bios get smbiosbiosversion
+
+28. OS
+systeminfo
+ systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
+ver
+wmic os get Caption,Version,BuildNumber,OSArchitecture
+
+29. licence os
+slmgr /dlv
+slmgr /xpr
+
+30. driver list
+driverquery /FO list /v
+driverquery /FO list /v > "%USERPROFILE%\Desktop\drivers.txt"
+
+32. system serial number
+    wmic bios get serialnumber
+    
+34. system ip
+ipconfig /all
+
+36. system performance
+    winsat formal
+    netstat -n
+    perfmon /res  (Launches Resource Monitor)
+    perfmon /report (Generates a system diagnostics report)
+    
+38. Disk Performance and Health
+    chkdsk C: /f
+    defrag C:
+    sfc /scannow
+    
+40. cpu load
+    wmic cpu get loadpercentage /value
+    
+42. ram free space
+wmic ComputerSystem get TotalPhysicalMemory
+wmic OS get FreePhysicalMemory
+systeminfo | findstr /C:"Total Physical Memory"
 </details>
 
 <details>
