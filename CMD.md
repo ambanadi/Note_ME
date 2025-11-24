@@ -39,7 +39,7 @@
 <details>
 <summary><b>🏗️Information</b></summary>
 1.Serial Number
- 
+
  wmic bios get serialnumber
  
 2. Mac Address
@@ -60,6 +60,8 @@ wmic computersystem get totalphysicalmemory
 wmic memorychip get capacity
 wmic memorychip get speed
 wmic memorychip list full
+wmic Memphysical get MemoryDevices
+wmic MemoryChip get BankLabel, DeviceLocator, Capacity
 
 8. Partition
 
@@ -94,11 +96,12 @@ systeminfo
   exit
 
 20. hard disk
-
+wmic diskdrive get name,model,size
     wmic diskdrive get model,index,firmwareRevision,status,interfaceType,totalHeads,totalTracks,totalCylinders,totalSectors,partitions
         fsutil fsinfo drives
         fsutil fsinfo volumelist
         fsutil fsinfo statistics C:
+
 22. motherboard
 
 wmic baseboard get product,manufacturer,version,serialnumber
@@ -110,6 +113,7 @@ wmic path win32_VideoController get name
 26. BIOS
 
 wmic bios get smbiosbiosversion
+wmic bios get serialnumber
 
 28. OS
 systeminfo
@@ -117,6 +121,13 @@ systeminfo
 ver
 wmic os get Caption,Version,BuildNumber,OSArchitecture
 systeminfo | find "System Boot Time"
+driverquery
+
+hostname
+whoami
+
+powercfg /batteryreport
+
 29. licence os
 slmgr /dlv
 slmgr /xpr
@@ -130,6 +141,7 @@ driverquery /FO list /v > "%USERPROFILE%\Desktop\drivers.txt"
     
 34. system ip
 ipconfig /all
+ipconfig
 
 36. system performance
     winsat formal
@@ -144,7 +156,30 @@ ipconfig /all
     
 40. cpu load
     wmic cpu get loadpercentage /value
-    
+
+41. Netword
+netstat (Active Connections)
+netsh advfirewall show allprofiles (Firewall Status)
+netsh wlan show interfaces
+ipconfig /release
+ipconfig /renew
+
+Wi-Fi ON / OFF
+netsh interface set interface name="Wi-Fi" admin=enabled
+
+netsh interface set interface name="Wi-Fi" admin=disabled
+
+Show All Network Interfaces
+netsh interface show interface
+
+Reset Network
+netsh int ip reset
+netsh winsock reset
+
+Wi-Fi Password (Saved Networks)
+netsh wlan show profiles
+netsh wlan show profile name="WiFiName" key=clear 
+ 
 42. ram free space
 wmic ComputerSystem get TotalPhysicalMemory
 wmic OS get FreePhysicalMemory
