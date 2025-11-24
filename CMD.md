@@ -116,7 +116,7 @@ systeminfo
  systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
 ver
 wmic os get Caption,Version,BuildNumber,OSArchitecture
-
+systeminfo | find "System Boot Time"
 29. licence os
 slmgr /dlv
 slmgr /xpr
