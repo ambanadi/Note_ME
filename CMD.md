@@ -221,7 +221,8 @@ Command > Sweitch > Arguments
 Command > Sweitch > Arguments
 </details>
 
-____
+_  ```powershell
+
 mkdir "%USERPROFILE%\Desktop\MyFolder"
 --
 rd /s /q "%USERPROFILE%\Desktop\MyFolder"
