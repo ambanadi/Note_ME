@@ -220,3 +220,19 @@ Command > Sweitch > Arguments
 <summary><b>🏗️Network</b></summary>
 Command > Sweitch > Arguments
 </details>
+
+____
+mkdir "%USERPROFILE%\Desktop\MyFolder"
+--
+rd /s /q "%USERPROFILE%\Desktop\MyFolder"
+_
+@echo off
+rd /s /q "D:\Me"
+echo Folder Deleted!
+pause
+---
+@echo off
+echo Computer will shutdown in 5 seconds...
+shutdown /s /t 5
+pause
+
