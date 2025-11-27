@@ -12,7 +12,7 @@
 |title| ဂေါင်းစိုင် ||
 |runas| ခွင့်ပြုချက် |runas /user:administrator cmd|
 |del /? (help)| အကူအညီ ||
-|cd C:\ |C ထဲ| cd \(ဒေတိုင်လည်းလားနိုင်)cd /d D:\|
+|cd C:\ |C ထဲ| cd \(ဒေတိုင်လည်းလားနိုင်)cd /d D:\ |
 |dir| ဖိုင်စစ် |dir /A (အကုန်စစ်)|
 |dir **| ဖိုင်စစ်(Wild card) |dir *my_me*.* /s|
 |dir *| ဖိုင်စစ်(Wild card) |dir*.pdf /s|
