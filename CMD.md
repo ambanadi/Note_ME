@@ -235,4 +235,7 @@ pause
 echo Computer will shutdown in 5 seconds...
 shutdown /s /t 5
 pause
-
+-----------------
+@echo off
+C:
+net user %username% jaiminpatel
