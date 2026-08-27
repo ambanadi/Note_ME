@@ -6,3 +6,20 @@ Swagger (OpenAPI): PHP ကုဒ်ထဲမှာတင် Comment ပုံစ
 https://editor.swagger.io/
 
 ရိုးရိုး Markdown (README.md): စာမျက်နှာ သိပ်မများရင် GitHub သို့မဟုတ် စာသားဖိုင်အဖြစ် အောက်ပါအတိုင်း ရှင်းရှင်းလင်းလင်း ရေးပေးနိုင်ပါတယ်။
+
+
+.htpasswd
+admin:$apr1$q8k55301$5J5H6xM7S4jT0N.F5u71W/
+htpasswd Generator သုံးပါ
+
+.htaccess
+AuthType Basic
+AuthName "Restricted OpenAPI Documentation"
+AuthUserFile /home/username/public_html/me/.htpasswd
+Require valid-user
+
+
+getpath.php
+<?php
+echo __DIR__ . '/.htpasswd';
+?>
