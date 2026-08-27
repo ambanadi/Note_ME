@@ -9,10 +9,13 @@ https://editor.swagger.io/
 
 
 .htpasswd
+
 admin:$apr1$q8k55301$5J5H6xM7S4jT0N.F5u71W/
+
 htpasswd Generator သုံးပါ
 
 .htaccess
+
 AuthType Basic
 AuthName "Restricted OpenAPI Documentation"
 AuthUserFile /home/username/public_html/me/.htpasswd
@@ -20,6 +23,7 @@ Require valid-user
 
 
 getpath.php
+
 <?php
 echo __DIR__ . '/.htpasswd';
 ?>
