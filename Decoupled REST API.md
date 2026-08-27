@@ -16,10 +16,8 @@ htpasswd Generator သုံးပါ
 
 .htaccess
 
-AuthType Basic
-AuthName "Restricted OpenAPI Documentation"
-AuthUserFile /home/username/public_html/me/.htpasswd
-Require valid-user
+Hybrid App (သို့မဟုတ်) Cross-Platform App
+Capacitor / Cordova (HTML to Phone)
 
 
 getpath.php
